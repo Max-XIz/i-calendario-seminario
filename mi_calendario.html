@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calendario: Pensar la enseñanza de la Historia reciente</title>
+    <!-- Carga de Tailwind CSS para estilos modernos y responsivos -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        /* Fuentes personalizadas para una mejor estética */
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap');
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #f0f2f5; /* Fondo gris claro */
+        }
+        .card {
+            background-color: #ffffff;
+            border-radius: 1rem; /* Bordes más redondeados */
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1); /* Sombra más pronunciada */
+            overflow: hidden;
+            transition: transform 0.3s ease-in-out;
+            position: relative; /* Necesario para posicionar el modal */
+        }
+        .card:hover {
+            transform: translateY(-5px); /* Efecto de elevación al pasar el ratón */
+        }
+        .header-bg {
+            background: linear-gradient(135deg, #4a90e2 0%, #0056b3 100%); /* Degradado azul */
+        }
+        .date-box {
+            background-color: #e0f2f7; /* Fondo azul claro para la fecha */
+            border-radius: 0.75rem;
+            padding: 0.5rem 1rem;
+            font-weight: 700;
+            color: #0056b3;
+        }
+        .speaker-name {
+            color: #333;
+            font-weight: 600;
+        }
+        .topic-text {
+            color: #555;
+        }
+        .time-text {
+            color: #777;
+            font-size: 0.9rem;
+        }
+        .image-container {
+            height: 200px; /* Altura fija para las imágenes */
+            overflow: hidden;
+            border-radius: 1rem; /* Bordes redondeados para las imágenes */
+        }
+        .image-container img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover; /* Asegura que la imagen cubra el contenedor */
+            transition: transform 0.5s ease;
+        }
+        .image-container img:hover {
+            transform: scale(1.05); /* Zoom en la imagen al pasar el ratón */
+        }
+    </style>
+</head>
+<body class="p-4 sm:p-6 md:p-8 lg:p-10">
+    <div class="max-w-6xl mx-auto bg-white p-6 sm:p-8 md:p-10 rounded-2xl shadow-xl">
+        <!-- Encabezado del calendario -->
+        <div class="header-bg text-white p-6 rounded-t-xl mb-8 text-center">
+            <h1 class="text-3xl sm:text-4xl font-bold mb-2">CRONOGRAMA</h1>
+            <h2 class="text-xl sm:text-2xl font-semibold">Seminario: “Pensar la enseñanza de la Historia reciente”</h2>
+            <p class="text-sm sm:text-base mt-2">Encuentros presenciales</p>
+        </div>
+
+        <!-- Contenedor principal de los eventos -->
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+            <!-- Evento 1: 16 de julio -->
+            <div class="card p-6 flex flex-col items-start">
+                <div class="image-container w-full mb-4">
+                    <img src="https://imgs.elpais.com.uy/dims4/default/0177f09/2147483647/strip/true/crop/1690x1162+0+18/resize/1440x990!/quality/90/?url=https%3A%2F%2Fel-pais-uruguay-production-web.s3.us-east-1.amazonaws.com%2Fbrightspot%2Fuploads%2F2018%2F09%2F13%2F5b9a797bbd5b3.jpeg" alt="Imagen de la dictadura 1">
+                </div>
+                <div class="date-box mb-3">16 de julio</div>
+                <p class="speaker-name text-lg mb-1">Silvana Espiga, Gustavo Faget y Carla Larrobla</p>
+                <p class="topic-text text-base mb-2">Categorías conceptuales y fuentes para el abordaje del pasado reciente en la clase de Historia.</p>
+                <p class="time-text mt-auto">18:30 - 20:30</p>
+            </div>
+
+            <!-- Evento 2: 17 de julio (Lilián Galán) -->
+            <div class="card p-6 flex flex-col items-start">
+                <div class="image-container w-full mb-4">
+                    <img src="https://www.laizquierdadiario.com/IMG/jpg/arton201203.jpg" alt="Imagen de la dictadura 2">
+                </div>
+                <div class="date-box mb-3">17 de julio</div>
+                <p class="speaker-name text-lg mb-1">Lilián Galán</p>
+                <p class="topic-text text-base mb-2">El modelo económico de la dictadura.</p>
+                <p class="time-text mt-auto">18:30 - 19:30</p>
+            </div>
+
+            <!-- Evento 3: 17 de julio (Vania Markarián) -->
+            <div class="card p-6 flex flex-col items-start">
+                <div class="image-container w-full mb-4">
+                    <img src="https://www.tni.org/files/styles/image_wide_small/public/2023-06/4.jpg?h=bdd1ffa8&itok=gGCrk2AS" alt="Imagen de la dictadura 3">
+                </div>
+                <div class="date-box mb-3">17 de julio</div>
+                <p class="speaker-name text-lg mb-1">Vania Markarián</p>
+                <p class="topic-text text-base mb-2">La política cultural de la dictadura y el año de la Orientalidad.</p>
+                <p class="time-text mt-auto">19:30 - 20:30</p>
+            </div>
+
+            <!-- Evento 4: 23 de julio (Lucía Brusa) -->
+            <div class="card p-6 flex flex-col items-start">
+                <div class="image-container w-full mb-4">
+                    <img src="https://mume.montevideo.gub.uy/sites/mume.montevideo.gub.uy/files/articulos/imagenes/2.a_el_pueblo_que_no_queria_ser_gris_tapa.jpg" alt="Imagen de la dictadura 4">
+                </div>
+                <div class="date-box mb-3">23 de julio</div>
+                <p class="speaker-name text-lg mb-1">Lucía Brusa</p>
+                <p class="topic-text text-base mb-2">Libros infantiles censurados por la dictadura.</p>
+                <p class="time-text mt-auto">18:30 - 19:00</p>
+            </div>
+
+            <!-- Evento 5: 23 de julio (Victoria Amir y Andrea Fernández) -->
+            <div class="card p-6 flex flex-col items-start">
+                <div class="image-container w-full mb-4">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/b/b1/Dictadura_c%C3%ADvico_militar.png" alt="Imagen de Sitios de Memoria">
+                </div>
+                <div class="date-box mb-3">23 de julio</div>
+                <p class="speaker-name text-lg mb-1">Victoria Amir, Andrea Fernández</p>
+                <p class="topic-text text-base mb-2">Los sitios de memoria como lugares de aprendizaje del pasado reciente.</p>
+                <p class="time-text mt-auto">19:00 - 20:30</p>
+            </div>
+
+            <!-- Evento 6: 24 de julio (Ma Inés Rivero y Elena Acevedo) -->
+            <div class="card p-6 flex flex-col items-start">
+                <div class="image-container w-full mb-4">
+                    <img src="https://i.ytimg.com/vi/C2k-ZP5FNpk/mqdefault.jpg" alt="Imagen de Experiencias en el aula">
+                </div>
+                <div class="date-box mb-3">24 de julio</div>
+                <p class="speaker-name text-lg mb-1">Ma Inés Rivero, Elena Acevedo</p>
+                <p class="topic-text text-base mb-2">Experiencias de abordaje del pasado reciente en el aula de primaria.</p>
+                <p class="time-text mt-auto">18:30 - 20:30</p>
+            </div>
+
+            <!-- Evento 7: 30 de julio (Luciana Fuques y Elina Rostan) -->
+            <div class="card p-6 flex flex-col items-start">
+                <div class="image-container w-full mb-4">
+                    <img src="https://brecha.com.uy/wp-content/uploads/2019/10/fhc_pazyfuturo_0029.jpg" alt="Imagen de Enseñanza Historia">
+                </div>
+                <div class="date-box mb-3">30 de julio</div>
+                <p class="speaker-name text-lg mb-1">Luciana Fuques, Elina Rostan</p>
+                <p class="topic-text text-base mb-2">Vicisitudes y oportunidades en la enseñanza de la historia reciente.</p>
+                <p class="time-text mt-auto">18:30 - 20:30</p>
+            </div>
+
+            <!-- Evento 8: 30 de julio (Nicolás Arata) -->
+            <div class="card p-6 flex flex-col items-start">
+                <div class="image-container w-full mb-4">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTBbTG2A0dWq7IwxW_TmZLnaPaWzpA44glMvw&s" alt="Imagen de Haciendo memoria">
+                </div>
+                <div class="date-box mb-3">30 de julio</div>
+                <p class="speaker-name text-lg mb-1">Nicolás Arata</p>
+                <p class="topic-text text-base mb-2">Haciendo memoria en el país de nomeacuerdo ¿Por qué insistimos en enseñar historia en la escuela?</p>
+                <p class="time-text mt-auto">20:30 - 21:00</p>
+            </div>
+        </div>
+
+        <!-- Pie de página o información adicional -->
+        <div class="mt-10 text-center text-gray-600 text-sm">
+            <p>Organizado por el programa "Pensar la enseñanza de la Historia reciente"</p>
+            <p>Para más información, contactar con la coordinación del seminario.</p>
+        </div>
+    </div>
+</body>
+</html>
